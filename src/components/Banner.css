@@ -1,0 +1,38 @@
+.banner {
+  height: 520px;
+  object-fit: contain;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+.banner-info {
+  margin-left: 100px;
+  padding-top: 130px;
+  height: 190px;
+  width: 40%;
+}
+.banner-info h1 {
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+}
+.banner-info p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+.banner-button {
+  background-color: rgba(51, 51, 51, 0.5);
+  color: white;
+  height: 50px;
+  width: 120px;
+  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 13px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.45s;
+}
+.banner-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
