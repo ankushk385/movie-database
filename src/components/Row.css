@@ -15,6 +15,7 @@
   padding: 20px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
 }
 .row-posters::-webkit-scrollbar {
   display: none;

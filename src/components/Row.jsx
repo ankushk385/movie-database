@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+import Modal from './Modal'
 import axios from "../axios";
-import Youtube from "react-youtube";
+
 import movieTrailer from "movie-trailer";
 import "./Row.css";
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = ({ title, fetchUrl, isLargeRow }) => {
   const opts = {
-    height: "500",
-    width: "100%",
+    height: "800px",
+    width: "1500px",
     playerVars: {
       autoplay: 1,
     },
@@ -40,12 +41,15 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     }
   };
 
+ 
+
   return (
     <>
       <div className="row">
         <h2>{title}</h2>
         <div className="row-posters">
           {movies.map((movie) => (
+            <>
             <img
               onClick={() => {
                 handle(movie);
@@ -55,11 +59,14 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
               src={`${base_url}${
                 isLargeRow ? movie.poster_path : movie.backdrop_path
               }`}
-              alt={movie.name}
+              alt={movie?.name || movie?.title || movie?.original_name}
             />
+            <h5 style={{color:"white" }}>{movie?.name || movie?.title || movie?.original_name}</h5>
+            </>
           ))}
-        </div>
-        {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
+        </div >
+       {trailerUrl && <Modal setTrailerUrl={setTrailerUrl} trailerUrl={trailerUrl} opts={opts} /> }
+        
       </div>
     </>
   );

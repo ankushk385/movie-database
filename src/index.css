@@ -4,7 +4,23 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
 .container {
-  background-color: #f3f3f3;
-  color: #283747;
+   background: #232427;
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
+
+.backdrop{
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
