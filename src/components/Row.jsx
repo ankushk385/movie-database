@@ -7,8 +7,8 @@ import "./Row.css";
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = ({ title, fetchUrl, isLargeRow }) => {
   const opts = {
-    height: "800px",
-    width: "1500px",
+    height: "600px",
+    width: "1200px",
     playerVars: {
       autoplay: 1,
     },
@@ -61,7 +61,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
               }`}
               alt={movie?.name || movie?.title || movie?.original_name}
             />
-            <h5 style={{color:"white" }}>{movie?.name || movie?.title || movie?.original_name}</h5>
+            {/* <h5 style={{color:"white" }}>{movie?.name || movie?.title || movie?.original_name}</h5> */}
             </>
           ))}
         </div >
